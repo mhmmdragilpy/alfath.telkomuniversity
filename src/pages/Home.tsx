@@ -78,13 +78,13 @@ export default function Home() {
   ];
 
   const fakultas = [
-    { id: 'fakultas-fif', title: 'Fakultas Informatika', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Informatika") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Informatika') }] },
-    { id: 'fakultas-fte', title: 'Fakultas Teknik Elektro', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Teknik Elektro") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Teknik Elektro') }] },
-    { id: 'fakultas-fri', title: 'Fakultas Rekayasa Industri', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Rekayasa Industri") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Rekayasa Industri') }] },
-    { id: 'fakultas-feb', title: 'Fakultas Ekonomi dan Bisnis', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Ekonomi dan Bisnis") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Ekonomi dan Bisnis') }] },
-    { id: 'fakultas-fks', title: 'Fakultas Komunikasi dan Sosial', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Komunikasi dan Ilmu Sosial") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Komunikasi dan Ilmu Sosial') }] },
-    { id: 'fakultas-fit', title: 'Fakultas Ilmu Terapan', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Ilmu Terapan") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Ilmu Terapan') }] },
-    { id: 'fakultas-fik', title: 'Fakultas Industri Kreatif', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Industri Kreatif") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Industri Kreatif') }] },
+    { id: 'fakultas-fif', title: 'Fakultas Informatika', accent: '#EAB308', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Informatika") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Informatika') }] },
+    { id: 'fakultas-fte', title: 'Fakultas Teknik Elektro', accent: '#2563EB', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Teknik Elektro") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Teknik Elektro') }] },
+    { id: 'fakultas-fri', title: 'Fakultas Rekayasa Industri', accent: '#166534', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Rekayasa Industri") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Rekayasa Industri') }] },
+    { id: 'fakultas-feb', title: 'Fakultas Ekonomi dan Bisnis', accent: '#0D9488', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Ekonomi dan Bisnis") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Ekonomi dan Bisnis') }] },
+    { id: 'fakultas-fks', title: 'Fakultas Komunikasi dan Sosial', accent: '#9333EA', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Komunikasi dan Ilmu Sosial") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Komunikasi dan Ilmu Sosial') }] },
+    { id: 'fakultas-fit', title: 'Fakultas Ilmu Terapan', accent: '#84CC16', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Ilmu Terapan") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Ilmu Terapan') }] },
+    { id: 'fakultas-fik', title: 'Fakultas Industri Kreatif', accent: '#F97316', members: [{ photo: getProfilPhoto("Mas'Ul Fakultas Industri Kreatif") }, { photo: getProfilPhoto('Koordinasi Akhwat Fakultas Industri Kreatif') }] },
   ];
 
   return (
@@ -331,7 +331,7 @@ export default function Home() {
             {fakultas.map((fak, index) => (
               <div key={fak.id} className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100`}>
                 <div className="md:w-1/3 text-center md:text-left">
-                  <h3 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">{fak.title}</h3>
+                  <h3 className="text-3xl lg:text-4xl font-extrabold mb-6 leading-tight drop-shadow-sm" style={{ color: fak.accent }}>{fak.title}</h3>
                   <Link to={`/profil/${fak.id}`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">
                     Lihat Detail Fakultas <ArrowRight className="w-4 h-4" />
                   </Link>
