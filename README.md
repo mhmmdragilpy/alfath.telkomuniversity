@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/favicon.svg" alt="LDK Al-Fath Logo" width="150" />
+  <img src="public/Logo%20Al-Fath.svg" alt="LDK Al-Fath Logo" width="180" />
   <h1>LDK Al-Fath Telkom University</h1>
   <p><strong>Sistem Informasi & Ekosistem Digital Lembaga Dakwah Kampus</strong></p>
 
