@@ -29,6 +29,9 @@ const socials = [
 
 const strukturLinks = [
   { to: '/profil/pusat', label: 'Pimpinan Pusat' },
+  { to: '/profil/sekretaris-jendral', label: 'Sekretaris Jendral' },
+  { to: '/profil/biro-kesekretariatan', label: 'Biro Kesekretariatan' },
+  { to: '/profil/biro-keuangan', label: 'Biro Keuangan' },
   { to: '/profil/departemen-kaderisasi', label: 'Dept. Kaderisasi' },
   { to: '/profil/departemen-syiar', label: 'Dept. Syiar' },
   { to: '/profil/departemen-medkominfo', label: 'Dept. Medkominfo' },
